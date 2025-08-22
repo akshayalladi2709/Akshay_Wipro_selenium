@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="257.309" tests="7" skipped="0" failures="2" errors="0" timestamp="2025-08-21T11:26:34.131016500Z">
+<testcase classname="eBay Login" name="User logs in with valid credentials" time="64.998">
+<failure type="org.openqa.selenium.ElementNotInteractableException" message="Element &lt;input id=&quot;pass&quot; class=&quot;textbox__control&quot; name=&quot;pass&quot; type=&quot;password&quot;&gt; is not reachable by keyboard
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d39df8c8-f85d-4f9a-ae93-b4b6ef10ce97, sendKeysToElement {id=fb4b4dc5-5d5d-4b2b-9b26-1c88a36489a0, value=[Ljava.lang.CharSequence;@2899a8db}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27816, moz:profile: C:\Users\kumma\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (d39df8c8-f85d-4f9a-ae93-b4b6ef10ce97)] -&gt; id: pass]
+Session ID: d39df8c8-f85d-4f9a-ae93-b4b6ef10ce97">
+<![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <input id="pass" class="textbox__control" name="pass" type="password"> is not reachable by keyboard
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d39df8c8-f85d-4f9a-ae93-b4b6ef10ce97, sendKeysToElement {id=fb4b4dc5-5d5d-4b2b-9b26-1c88a36489a0, value=[Ljava.lang.CharSequence;@2899a8db}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27816, moz:profile: C:\Users\kumma\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (d39df8c8-f85d-4f9a-ae93-b4b6ef10ce97)] -> id: pass]
+Session ID: d39df8c8-f85d-4f9a-ae93-b4b6ef10ce97
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at ebay_tests.ebay_cucumberpageclass.login(ebay_cucumberpageclass.java:39)
+	at ebay_tests.ebay_LoginSteps.the_user_enters_email_and_password(ebay_LoginSteps.java:28)
+	at ✽.the user enters their email and password(file:///C:/wipro%20selenium/Cucumber_cdd2/src/test/resources/features/01ebayLogin.feature:5)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user navigates to the eBay login page.............................passed
+When the user enters their email and password...............................failed
+Then the user should be signed in successfully..............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Multiple item search on eBay" name="User searches for multiple items one by one" time="35.321">
+<system-out><![CDATA[
+Given the user is on the eBay homepage......................................passed
+When the user searches for "Watch","Phone","Shoes"..........................passed
+Then the search results should be displayed for each item...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add item to cart and then remove it" name="User adds an item to cart and deletes it" time="46.553">
+<system-out><![CDATA[
+Given the user is on the eBay homepage to add and remove item...............passed
+When the user adds and removes an item from the cart........................passed
+Then the cart should not contain the item...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Update address and name in eBay profile" name="User updates profile address and middle name" time="21.341">
+<failure type="org.openqa.selenium.NoSuchWindowException" message="Browsing context has been discarded
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [4838a824-4f84-49f6-8879-36e6d3241548, findElement {using=id, value=gh-logo}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35480, moz:profile: C:\Users\kumma\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 4838a824-4f84-49f6-8879-36e6d3241548">
+<![CDATA[org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [4838a824-4f84-49f6-8879-36e6d3241548, findElement {using=id, value=gh-logo}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35480, moz:profile: C:\Users\kumma\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 4838a824-4f84-49f6-8879-36e6d3241548
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at ebay_tests.ebay_cucumberpageclass.changeAddressAndName(ebay_cucumberpageclass.java:105)
+	at ebay_tests.ebay_ProfileUpdate.user_updates_address_and_name(ebay_ProfileUpdate.java:27)
+	at ✽.the user updates address and name in account settings(file:///C:/wipro%20selenium/Cucumber_cdd2/src/test/resources/features/04ebayProfileUpdate.feature:5)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is logged in to update address...............................passed
+When the user updates address and name in account settings..................failed
+Then the updated profile information should be saved........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Hover over and explore top categories" name="User explores different categories" time="50.33">
+<system-out><![CDATA[
+Given the user is on the eBay homepage to explore categories................passed
+When the user hovers over different categories..............................passed
+Then the subcategories should be displayed..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search using all categories option" name="User selects &quot;All Categories&quot; and searches" time="16.775">
+<system-out><![CDATA[
+Given the user is on eBay homepage to shop by all categories................passed
+When the user selects all categories and performs search....................passed
+Then search results from all categories should appear.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change language or country on eBay" name="User changes the country to Italy" time="21.523">
+<system-out><![CDATA[
+Given the user is on the eBay homepage to change language...................passed
+When the user scrolls down and changes country to Italy.....................passed
+Then the site should switch to Italian version..............................passed
+]]></system-out>
+</testcase>
+</testsuite>
+.....passed
+]]></system-out>
+</testcase>
+</testsuite>
